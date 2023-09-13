@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine">
+      <UniqueIdentifier>{cfbcf805-ee3b-4753-b6fa-e53cab9d1c02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\NeuComponent">
+      <UniqueIdentifier>{86682e35-d867-4484-bbae-9544c4575795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Project">
+      <UniqueIdentifier>{9bf3e828-720a-4cc3-8a7b-79aecdfd974b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\NeuComponent\HID">
+      <UniqueIdentifier>{1284fc89-d7f1-4640-8345-e2363426d54e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\IO">
+      <UniqueIdentifier>{1e8ca7bc-9deb-4b1f-ace3-52481eb6be39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\3rdParty">
+      <UniqueIdentifier>{3b65ab13-4af7-4a09-829c-b4738a9405ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\3rdParty\Imgui">
+      <UniqueIdentifier>{32aa0825-5833-4568-8fab-afc584993379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\3rdParty\Imgui\api">
+      <UniqueIdentifier>{2ad4aeb0-aa45-4cca-8e44-a4384d28e794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Shader">
+      <UniqueIdentifier>{96d54772-7acd-4b4a-bfdb-52cf69521b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\NeuComponent\Actor">
+      <UniqueIdentifier>{b67a7981-166f-472c-b95e-1d4fefb6440e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\NeuVulkan">
+      <UniqueIdentifier>{20104a07-e48c-4f18-91f5-6d456ef70025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Engine\NeuComponent\Theatre">
+      <UniqueIdentifier>{7d27c612-51dd-40d2-bc53-d2b73a8c7038}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\main.cpp">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuCore.cpp">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_demo.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_draw.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_impl_glfw.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_impl_vulkan.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_tables.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\API\imgui_widgets.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\thirdParty\Imgui\SystemGUI.cpp">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuVulkan\VulkanCore.cpp">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuTools.cpp">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuComponent\Camera.cpp">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuVulkan\NeuVulkanTools.cpp">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuVulkan\Texture.cpp">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\NeuVulkan\Shader.cpp">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\NeuCore.h">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\Random.h">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuTools.h">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\IO\io.h">
+      <Filter>ソース ファイル\Engine\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuDataStructure.h">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\main.h">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imconfig.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imgui.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imgui_impl_glfw.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imgui_impl_vulkan.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imgui_internal.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imstb_rectpack.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imstb_textedit.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\API\imstb_truetype.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui\api</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\thirdParty\Imgui\SystemGUI.h">
+      <Filter>ソース ファイル\Engine\3rdParty\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\Actor\Actor.h">
+      <Filter>ソース ファイル\Engine\NeuComponent\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\mesh.h">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\Pipeline.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\Shader.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\VulkanCore.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\Camera.h">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\NeuVulkanTools.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\Config.h">
+      <Filter>ソース ファイル\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\Theatre\Theatre.h">
+      <Filter>ソース ファイル\Engine\NeuComponent\Theatre</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\lighting.h">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\Texture.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="res\shader\lightCalc.h">
+      <Filter>リソース ファイル\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuComponent\Timer.h">
+      <Filter>ソース ファイル\Engine\NeuComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\NeuVulkan\VulkanDescriptor.h">
+      <Filter>ソース ファイル\Engine\NeuVulkan</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shader\shadercp.bat">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\shader.frag">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\shader.vert">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\lighting.frag">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\lighting.vert">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\testShader.frag">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+    <None Include="res\shader\testShader.vert">
+      <Filter>リソース ファイル\Shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
