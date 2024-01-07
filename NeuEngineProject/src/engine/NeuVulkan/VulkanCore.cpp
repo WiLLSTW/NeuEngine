@@ -1023,7 +1023,7 @@ void NEVulkanCore::release() {
 
 void NEVulkanCore::releaseVulkanSet() {
 	vkDestroySurfaceKHR(set.Instance, set.Surface, nullptr);
-	vkDestroyPipelineCache(set.Device, set.PipelineCache, nullptr);
+	//vkDestroyPipelineCache(set.Device, set.PipelineCache, nullptr);
 	vkDestroyCommandPool(set.Device, set.CommandPool, nullptr);
 	vkDestroyDevice(set.Device, nullptr);
 	vkDestroyInstance(set.Instance, nullptr);
@@ -1054,41 +1054,17 @@ void NEVulkanCore::createPipeline(PipelineSet &pipeline,const std::string vertex
 
 
 	NEUVKShader *shader = NEUVKShader::CreateShader(false,vertexShader.c_str(),fragmentShader.c_str(), nullptr);
-
-	VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
-	VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
-	
-	////vertex shader
-	//VkPipelineShaderStageCreateInfo vertShaderStageInfo{};
-	//vertShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
-	//vertShaderStageInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
-	//vertShaderStageInfo.module = vertShaderModule;
-	//vertShaderStageInfo.pName = "main";
-
-	////fragment shader(or pixel shader)
-	//VkPipelineShaderStageCreateInfo fragShaderStageInfo{};
-	//fragShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
-	//fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
-	//fragShaderStageInfo.module = fragShaderModule;
-	//fragShaderStageInfo.pName = "main";
-
-	//VkPipelineShaderStageCreateInfo shaderStages[] = { vertShaderStageInfo, fragShaderStageInfo };
-
-
 	/*Vertex Input*/
 	VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
 	vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
 
 	/*
-	 *Vertex Input BInd
+	 *Vertex Input Bind
 	 */
-	auto bindingDescription = Vertex::getBindingDescription();
-	auto attributeDescription = Vertex::getAttributeDescriptions();
-
-	vertexInputInfo.vertexBindingDescriptionCount = 1;
-	vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescription.size());
-	vertexInputInfo.pVertexBindingDescriptions = &bindingDescription;
-	vertexInputInfo.pVertexAttributeDescriptions = attributeDescription.data();
+	vertexInputInfo.vertexBindingDescriptionCount = shader->InputBindings.size();
+	vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(shader->InputAttributeDescriptions.size());
+	vertexInputInfo.pVertexBindingDescriptions = shader->InputBindings.data();
+	vertexInputInfo.pVertexAttributeDescriptions = shader->InputAttributeDescriptions.data();
 
 	/*
 		Input Assembly
@@ -1100,6 +1076,9 @@ void NEVulkanCore::createPipeline(PipelineSet &pipeline,const std::string vertex
 	inputAssemblyCreateInfo.primitiveRestartEnable = VK_FALSE;
 
 
+	/*
+		ViewPortState
+	*/
 	VkPipelineViewportStateCreateInfo viewportState{};
 	viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
 	viewportState.viewportCount = 1;
@@ -1149,7 +1128,6 @@ void NEVulkanCore::createPipeline(PipelineSet &pipeline,const std::string vertex
 		VK_DYNAMIC_STATE_VIEWPORT,
 		VK_DYNAMIC_STATE_SCISSOR,
 	};
-
 
 	/*
 		Dynamic State
@@ -1216,8 +1194,6 @@ void NEVulkanCore::createPipeline(PipelineSet &pipeline,const std::string vertex
 
 	VKCREATEPROCESS(vkCreateGraphicsPipelines(set.Device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &pipeline.Pipeline), "failed to create graphics pipeline");
 
-	vkDestroyShaderModule(set.Device, fragShaderModule, nullptr);
-	vkDestroyShaderModule(set.Device, vertShaderModule, nullptr);
 }
 
 void NEVulkanCore::createMainPipeline() {

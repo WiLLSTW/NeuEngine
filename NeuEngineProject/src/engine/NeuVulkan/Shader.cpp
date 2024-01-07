@@ -299,17 +299,17 @@ void NEUVKShader::CreateLayout() {
 
 VertexInputType NEUVKShader::StringToVertexType(const char *name) {
 
-	if (strcmp(name, "inPosition") == 0|| strcmp(name,"fragPosition")==0) {
+	if (strcmp(name, "inPosition") == 0) {
 		return VertexInputType::NEU_VK_VERTEX_INPUT_TYPE_COLOR;
 	}
-	else if (strcmp(name, "inTexCoord")==0||strcmp(name,"fragTexcoord") == 0) {
+	else if (strcmp(name, "inTexCoord")==0) {
 		return VertexInputType::NEU_VK_VERTEX_INPUT_TYPE_UV;
 	}
-	else if (strcmp(name, "inNormal") == 0|| strcmp(name, "fragNormal") == 0) {
+	else if (strcmp(name, "inNormal") == 0) {
 		return VertexInputType::NEU_VK_VERTEX_INPUT_TYPE_NORMAL;
 
 	}
-	else if (strcmp(name, "inColor") == 0 || strcmp(name, "fragColor") == 0) {
+	else if (strcmp(name, "inColor") == 0 ) {
 		return VertexInputType::NEU_VK_VERTEX_INPUT_TYPE_COLOR;
 	}
 
